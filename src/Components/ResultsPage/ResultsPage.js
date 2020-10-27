@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import SearchBar from "../SearchBar/SearchBar";
+// import SearchBar from "../SearchBar/SearchBar";
+import Hero from "../Hero/Hero";
 import SearchResults from "../SearchResults/SearchResults";
 // import TrackList from "../TrackList/TrackList";
 import Playlist from "../Playlist/Playlist";
@@ -9,7 +10,8 @@ export default class ResultsPage extends Component {
   render() {
     return (
       <div className="results_page">
-        <SearchBar />
+        {/* <SearchBar onSearch={this.props.onSearch} /> */}
+        <Hero onSearch={this.props.onSearch} />
         <h2>Results</h2>
         <SearchResults
           searchResults={this.props.searchResults}
@@ -19,6 +21,8 @@ export default class ResultsPage extends Component {
           playlistName={this.props.playlistName}
           playlistTracks={this.props.playlistTracks}
           onRemove={this.props.onRemove}
+          onNameChange={this.props.onNameChange}
+          onSave={this.props.onSave}
         />
       </div>
     );
