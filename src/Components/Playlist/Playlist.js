@@ -7,6 +7,12 @@ export default class Playlist extends Component {
     this.props.onNameChange(event.target.value);
   };
 
+  enterKeySave = event => {
+    if (event.key === "Enter") {
+      this.onSave();
+    }
+  };
+
   render() {
     return (
       <div className="playlist">
@@ -16,6 +22,7 @@ export default class Playlist extends Component {
           tracks={this.props.playlistTracks}
           onRemove={this.props.onRemove}
           isRemoval={true}
+          //   onKeyDown={this.enterKeySave}
         />
         <button className="playlist_save" onClick={this.props.onSave}>
           Save To Spotify

@@ -7,6 +7,7 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 import NotFoundPage from "./Components/NotFoundPage/NotFoundPage";
 import Spotify from "../src/util/Spotify";
+import SearchBar from "./Components/SearchBar/SearchBar";
 
 export default class App extends Component {
   constructor(props) {
@@ -14,48 +15,72 @@ export default class App extends Component {
 
     this.state = {
       searchResults: [
-        {
-          name: "boi",
-          artist: "rahh",
-          album: "blah",
-          id: "1"
-        },
-        {
-          name: "shie",
-          artist: "mang",
-          album: "doh",
-          id: "2"
-        },
-        {
-          name: "abra",
-          artist: "kadabra",
-          album: "grahh",
-          id: "3"
-        }
+        // {
+        //   name: "boi",
+        //   artist: "rahh",
+        //   album: "blah",
+        //   id: "1"
+        // },
+        // {
+        //   name: "shie",
+        //   artist: "mang",
+        //   album: "doh",
+        //   id: "2"
+        // },
+        // {
+        //   name: "abra",
+        //   artist: "kadabra",
+        //   album: "grahh",
+        //   id: "3"
+        // }
       ],
       playlistName: "New Playlist",
       playlistTracks: [
-        {
-          name: "boi",
-          artist: "rahh",
-          album: "blah",
-          id: "1"
-        },
-        {
-          name: "shie",
-          artist: "mang",
-          album: "doh",
-          id: "2"
-        },
-        {
-          name: "abra",
-          artist: "kadabra",
-          album: "grahh",
-          id: "3"
-        }
+        // {
+        //   name: "boi",
+        //   artist: "rahh",
+        //   album: "blah",
+        //   id: "1"
+        // },
+        // {
+        //   name: "shie",
+        //   artist: "mang",
+        //   album: "doh",
+        //   id: "2"
+        // },
+        // {
+        //   name: "abra",
+        //   artist: "kadabra",
+        //   album: "grahh",
+        //   id: "3"
+        // }
       ]
     };
   }
+
+  // componentDidMount() {
+  //   // this.search();
+  //   let term = this.state.searchResults;
+  //   if (term == "") {
+  //     this.setState({
+  //       searchResults: term
+  //     });
+  //   } else {
+  //     this.search(term);
+  //   }
+
+  //   // this.setState({
+  //   //   searchResults: term
+  //   // });
+  //   // this.search(term);
+  // }
+
+  // componentDidMount() {
+  //   let term = this.search();
+  //   if (!term === "undefined") {
+  //     return;
+  //   }
+  // }
 
   addTrack = track => {
     let tracks = this.state.playlistTracks;
@@ -86,8 +111,12 @@ export default class App extends Component {
 
   savePlaylist = () => {
     const trackUris = this.state.playlistTracks.map(track => track.uri);
-    this.setState({
-      playlistTracks: trackUris
+    Spotify.savePlaylist(this.state.playlistName, trackUris).then(() => {
+      this.setState({
+        // playlistTracks: trackUris
+        playlistName: "New Playlist",
+        playlistTracks: []
+      });
     });
   };
 
@@ -107,9 +136,20 @@ export default class App extends Component {
         </header>
         <main>
           <Switch>
-            <Route exact path="/" component={HomePage}>
-              <HomePage onSearch={this.search} />
-            </Route>
+            {/* <Route exact path="/" component={HomePage}>
+              <HomePage
+                onSearch={this.search} */}
+            {/* // searchResults={this.state.searchResults}
+              /> */}
+            {/* <SearchBar onSearch={this.search} /> */}
+            {/* </Route> */}
+
+            <Route
+              exact
+              path="/"
+              render={() => <HomePage onSearch={this.search} />}
+            />
+
             {/* <Link
               to={{
                 pathname: "/results",
@@ -130,7 +170,9 @@ export default class App extends Component {
                 state: { searchResults: this.state.searchResults }
               }}
             /> */}
-            <Route path="/results" component={ResultsPage}>
+
+            {/* <Route path="/results" component={ResultsPage}> */}
+            {/* <Route path="/results" component={ResultsPage}>
               <ResultsPage
                 searchResults={this.state.searchResults}
                 onAdd={this.addTrack}
@@ -141,8 +183,27 @@ export default class App extends Component {
                 onSave={this.savePlaylist}
                 onSearch={this.search}
               />
-            </Route>
-            <Route component={NotFoundPage} />
+            </Route> */}
+
+            <Route
+              path="/results"
+              render={() => (
+                <ResultsPage
+                  searchResults={this.state.searchResults}
+                  onAdd={this.addTrack}
+                  playlistName={this.state.playlistName}
+                  playlistTracks={this.state.playlistTracks}
+                  onRemove={this.removeTrack}
+                  onNameChange={this.updatePlaylistName}
+                  onSave={this.savePlaylist}
+                  onSearch={this.search}
+                />
+              )}
+            />
+
+            {/* <Route component={NotFoundPage} /> */}
+
+            <Route render={() => <NotFoundPage />} />
           </Switch>
         </main>
         <footer>

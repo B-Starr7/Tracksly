@@ -8,7 +8,10 @@ export default class Hero extends Component {
   render() {
     return (
       <div className="hero">
-        <SearchBar onSearch={this.props.onSearch} />
+        <SearchBar
+          onSearch={this.props.onSearch}
+          // searchResults={this.props.searchResults}
+        />
         {/* HERO IMAGE/BACKGROUND */}
       </div>
     );
