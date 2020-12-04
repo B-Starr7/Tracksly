@@ -1,0 +1,75 @@
+div.playlist {
+  /* background-color: lightseagreen; */
+  /* background-color: #f6d8ae; */
+  background-color: white;
+  /* background-color: #da4167; */
+  color: #da4167;
+  /* color: white; */
+  /* padding-right: 20px; */
+  /* margin-right: 20px; */
+  margin-right: 2px;
+  /* border: 1px solid #da4167; */
+  /* border: 1px solid #083d77; */
+  /* border: 1px solid #f6d8ae; */
+  border: 1px solid white;
+  /* background-color: white; */
+  margin-top: 1px;
+  margin-bottom: 1px;
+  font-weight: bold;
+}
+
+button.playlist_save {
+  background-color: #083d77;
+  color: white;
+  font-weight: bold;
+  width: 220px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+button.playlist_save:hover {
+  cursor: pointer;
+  color: #da4167;
+}
+
+div.playlist input {
+  border: 1px solid silver;
+  background: linear-gradient(#eee, #fff);
+  transition: all 0.3s ease-out;
+  padding: 5px;
+  /* color: white; */
+  color: #083d77;
+  /* background: #083d77; */
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /* width: 25vw; */
+  /* font-weight: bold; */
+  font-size: 20px;
+}
+
+div.playlist input:focus {
+  outline: none;
+  background-position: 0 -1.7em;
+}
+
+/* div.playlist h2 {
+  color: white;
+  background-color: #da4167;
+  background-color: #083d77;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.3), 0 1px 1px rgba(255, 255, 255, 0.9);
+} */
+
+/* @media only screen and (min-width: 768px) {
+  div.playlist h2 {
+    color: #da4167;
+    background-color: white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    border: 0px;
+    box-shadow: 0px;
+  }
+} */

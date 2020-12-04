@@ -17,13 +17,15 @@ export default class Playlist extends Component {
     return (
       <div className="playlist">
         <h2>Playlist</h2>
-        <input onChange={this.handleNameChange} defaultValue={"New Playlist"} />
+        {/* <input onChange={this.handleNameChange} defaultValue={"New Playlist"} /> */}
         <TrackList
           tracks={this.props.playlistTracks}
           onRemove={this.props.onRemove}
           isRemoval={true}
           //   onKeyDown={this.enterKeySave}
         />
+        <input onChange={this.handleNameChange} defaultValue={"New Playlist"} />
+        <br></br>
         <button className="playlist_save" onClick={this.props.onSave}>
           Save To Spotify
         </button>

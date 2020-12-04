@@ -11,7 +11,7 @@ export default class NavBar extends Component {
             Tracksly
           </Link>
         </div>
-        <div className="spotify_button">Connect to Spotify</div>
+        {/* <div className="spotify_button">Connect to Spotify</div> */}
       </nav>
     );
   }

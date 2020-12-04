@@ -1,0 +1,37 @@
+div.tracklist {
+  background-color: white;
+  color: #083d77;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.35);
+  margin-top: 5px;
+  margin-bottom: 2.5px;
+  padding-bottom: 5px;
+}
+
+div.tracklist > div:nth-of-type(even) {
+  color: #da4167;
+  /* color: blueviolet; */
+}
+
+@media only screen and (min-width: 768px) {
+  div.tracklist {
+    background-color: white;
+    height: 70vh;
+    width: 45vw;
+    overflow: scroll;
+    display: block;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  div.tracklist > div:nth-of-type(even) {
+    color: #083d77;
+  }
+}
+
+/* div.tracklist {
+  background-color: white;
+  color: #083d77;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.35);
+  margin-top: 5px;
+  margin-bottom: 5px;
+} */

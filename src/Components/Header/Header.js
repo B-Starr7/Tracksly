@@ -7,7 +7,7 @@ export default class Header extends Component {
     return (
       <header className="header">
         <NavBar />
-        <h1>Discover new music!</h1>
+        <h1>Create new playlists instantly!</h1>
       </header>
     );
   }

@@ -12,18 +12,20 @@ export default class ResultsPage extends Component {
       <div className="results_page">
         {/* <SearchBar onSearch={this.props.onSearch} /> */}
         <Hero onSearch={this.props.onSearch} />
-        <h2>Results</h2>
-        <SearchResults
-          searchResults={this.props.searchResults}
-          onAdd={this.props.onAdd}
-        />
-        <Playlist
-          playlistName={this.props.playlistName}
-          playlistTracks={this.props.playlistTracks}
-          onRemove={this.props.onRemove}
-          onNameChange={this.props.onNameChange}
-          onSave={this.props.onSave}
-        />
+        <h2 className="results_title">Results</h2>
+        <div className="results_container">
+          <SearchResults
+            searchResults={this.props.searchResults}
+            onAdd={this.props.onAdd}
+          />
+          <Playlist
+            playlistName={this.props.playlistName}
+            playlistTracks={this.props.playlistTracks}
+            onRemove={this.props.onRemove}
+            onNameChange={this.props.onNameChange}
+            onSave={this.props.onSave}
+          />
+        </div>
       </div>
     );
   }
