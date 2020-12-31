@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import "./TracklistSong.css";
 
 export default class TracklistSong extends Component {
-  //   constructor(props) {
-  //     super(props);
-  //   }
-
   addTrack = () => {
     this.props.onAdd(this.props.track);
   };

@@ -9,7 +9,7 @@ export default class Playlist extends Component {
 
   enterKeySave = event => {
     if (event.key === "Enter") {
-      this.onSave();
+      this.props.onSave();
     }
   };
 
@@ -17,14 +17,16 @@ export default class Playlist extends Component {
     return (
       <div className="playlist">
         <h2>Playlist</h2>
-        {/* <input onChange={this.handleNameChange} defaultValue={"New Playlist"} /> */}
         <TrackList
           tracks={this.props.playlistTracks}
           onRemove={this.props.onRemove}
           isRemoval={true}
-          //   onKeyDown={this.enterKeySave}
         />
-        <input onChange={this.handleNameChange} defaultValue={"New Playlist"} />
+        <input
+          onChange={this.handleNameChange}
+          defaultValue={"New Playlist"}
+          onKeyPress={this.enterKeySave}
+        />
         <br></br>
         <button className="playlist_save" onClick={this.props.onSave}>
           Save To Spotify

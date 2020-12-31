@@ -5,58 +5,9 @@
     width: 100%;
     background-color: white;
   }
-
-  /* div.playlist {
-    display: block;
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 3;
-    overflow: scroll;
-  } */
-
-  /* div.tracklist {
-    background-color: white;
-    height: 70vh;
-    width: 45vw;
-    overflow: scroll;
-  } */
 }
 
-/* div.tracklist {
-  background-color: white;
-  color: #083d77;
-  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.35);
-  margin-top: 5px;
-} */
-
-/* div.results_page {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-} */
-
-/* div.hero {
-  flex-direction: column;
-} */
-
-/* div.search_results,
-div.playlist {
-  display: flex; 
-  flex-direction: row;
-} */
-
-/* div.search_results {
-  text-align: center;
-} */
-
-/* h2.results_title {
-  color: #083d77;
-  background-color: #f6d8ae;
-} */
-
 h2.results_title {
-  /* color: #f6d8ae; */
   color: white;
   background-color: #083d77;
   border: 1px solid rgba(0, 0, 0, 0.1);

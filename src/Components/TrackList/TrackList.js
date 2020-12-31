@@ -14,15 +14,9 @@ export default class TrackList extends Component {
               onAdd={this.props.onAdd}
               onRemove={this.props.onRemove}
               isRemoval={this.props.isRemoval}
-              // isRemoval={false}
             />
           );
         })}
-
-        {/* <TracklistSong />
-        <TracklistSong />
-        <TracklistSong /> */}
-        {/* you will add a map that renders a set of Track components */}
       </div>
     );
   }

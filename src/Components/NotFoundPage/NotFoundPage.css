@@ -1,0 +1,5 @@
+div.not_found_page {
+  width: 100%;
+  height: 250px;
+  background-image: linear-gradient(0deg, #f6d8ae 1%, #da4167);
+}

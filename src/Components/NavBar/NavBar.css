@@ -19,11 +19,6 @@ header.header {
 }
 
 @media only screen and (min-width: 768px) {
-  header {
-    /* display: flex;
-    justify-content: center; */
-  }
-
   header.header {
     display: flex;
     justify-content: center;
@@ -37,12 +32,6 @@ header.header {
   }
 
   h1 {
-    /* margin-left: -6.5vw; */
     margin-left: -7vw;
-  }
-
-  a.logo_link {
-    /* margin-left: 2.5px; */
-    /* margin-right: 2.5px; */
   }
 }

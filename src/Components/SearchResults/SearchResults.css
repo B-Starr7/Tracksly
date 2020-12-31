@@ -1,17 +1,8 @@
 div.search_results {
-  /* background-color: indianred; */
-  /* background-color: #f6d8ae; */
   background-color: white;
   color: #da4167;
-  /* padding: 0 20px; */
-  /* padding-left: 20px; */
-  /* margin-left: 20px; */
   margin-left: 2px;
-  /* border: 1px solid #083d77; */
-  /* border: 1px solid #da4167; */
-  /* border: 1px solid #f6d8ae; */
   border: 1px solid white;
-  /* background-color: white; */
   margin-top: 1px;
   margin-bottom: 1px;
   font-weight: bold;
