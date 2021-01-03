@@ -13,3 +13,12 @@ footer {
 main {
   flex: 1;
 }
+
+a {
+  color: white;
+}
+
+a:hover {
+  cursor: pointer;
+  color: #f6d8ae;
+}

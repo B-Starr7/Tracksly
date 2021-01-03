@@ -5,7 +5,13 @@ export default class Footer extends Component {
   render() {
     return (
       <div className="footer">
-        <p>©2020 Ben Starr</p>
+        <a
+          href="https://github.com/B-Starr7/tracksly"
+          target="_blank"
+          className="repo"
+        >
+          GitHub Repo
+        </a>
       </div>
     );
   }
