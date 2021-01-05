@@ -1,5 +1,20 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Tracksly.me
+This React project uses Spotify's playlist API along with React Router to allow any user with a Spotify account to create and upload playlists to their Spotify app.
+
+## Summary
+The web app asks new user to authenticate their Spotify account credentials upon visiting. After granting access, the user is able to search for any songs or artists they want, and a list of 20 songs will populate on the left side of the screen (desktop), or underneath the search bar (mobile). Users are then able to press the add button to populate songs of their choosing in the playist section of the app (right side, desktop; underneath search results, mobile). At this point, the user can then continue to search for songs and add them to their playlist as desired. When the playlist is complete, users can then choose a name for their new playlist and press the save button to upload it directly to their Spotify accounts. Returning users on the same device will not have to re-authenticate their Spotify accounts upon re-visiting the app.
+
+## Technologies Used
+This application was built using React.js and CSS.
+
+## Live App
+http://tracksly.me
+
+## Screenshots
+
+
 ## Available Scripts
 
 In the project directory, you can run:
