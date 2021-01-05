@@ -1,6 +1,6 @@
 let accessToken;
 const clientId = "59d0300b6aa34c8f8d8a892a910d4b90";
-const redirectUri = "http://localhost:3000/results";
+const redirectUri = "http://tracksly.me/results";
 
 const Spotify = {
   getAccesstoken() {
